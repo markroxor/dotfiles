@@ -1,11 +1,12 @@
 #!/bin/bash
 #
-# bootstrap.sh
+# install.sh
 # Symlink all dotfiles in this repo to $HOME.
 #
-# Brandon Amos
-# 2013.01.20
+# Originally by Brandon Amos
+# changes by Mohit Rathore(markroxor)
 
+#to stop the execution of the script totally if an error is encountered
 set -e
 
 link_file() {
@@ -13,7 +14,7 @@ link_file() {
 
   echo "  '$ORIG'"
   if [[ $BACKUP =~ ^[Yy]$ ]]; then
-    mv "$ORIG" "${ORIG}.prebamos" &> /dev/null \
+    mv "$ORIG" "${ORIG}.bak" &> /dev/null \
     && echo "    ...backed up"
   else
     rm -rf "$ORIG"
@@ -38,8 +39,8 @@ for DOTFILE in $(find . -maxdepth 1 -name '.?*'); do
   [[ $DOTFILE != "./.git" ]] \
     && [[ $DOTFILE != "./.gitmodules" ]] \
     && [[ $DOTFILE != "./.gitignore" ]] \
-    && [[ $DOTFILE != "./.config" ]] \
-    && [[ $DOTFILE != "./screenshots" ]] \
+#    && [[ $DOTFILE != "./.config" ]] \
+#    && [[ $DOTFILE != "./screenshots" ]] \
     && [[ ! $DOTFILE =~ swp$ ]] \
     && link_file "$HOME/$DOTFILE" "$PWD/$DOTFILE"
 done
