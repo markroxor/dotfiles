@@ -102,7 +102,7 @@ setopt HIST_IGNORE_DUPS
 #add timestamp for each entry
 setopt EXTENDED_HISTORY
 ##########################!/usr/bin/env bash
-alias please = sudo
+alias please=sudo
 
 #disables "somethin" > impFile to "somethin" >| impFile
 set -o noclobber
