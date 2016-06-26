@@ -1,0 +1,28 @@
+# Keybindings require three things to be fully defined: A selector that is
+# matched against the focused element, the keystroke and the command to
+# execute.
+#
+# Below is a basic keybinding which registers on all platforms by applying to
+# the root workspace element.
+
+# For more detailed documentation see
+# https://atom.io/docs/latest/advanced/keymaps
+'.platform-darwin atom-text-editor':
+  'ctrl-r': 'run:file'
+  'ctrl-shift-r': 'run:selection'
+
+'.platform-win32 atom-text-editor, .platform-linux atom-text-editor':
+  'alt-r': 'run:file'
+  'alt-shift-r': 'run:selection'
+
+'.platform-darwin .atom-runner':
+  'cmd-c': 'run:copy'
+
+'.platform-win32 .atom-runner, .platform-linux .atom-runner':
+  'ctrl-c': 'run:copy'
+
+'atom-workspace':
+  'shift-ctrl-c': 'run:stop'
+
+'.atom-runner':
+  'escape': 'run:close'

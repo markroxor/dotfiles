@@ -1,0 +1,63 @@
+// The ui-variables file is provided by base themes provided by Atom.
+//
+// See https://github.com/atom/atom-dark-ui/blob/master/styles/ui-variables.less
+// for a full listing of what's available.
+@import "ui-variables";
+
+.atom-shell-commands-console {
+	font-family: 'consolas', 'monospace';
+	padding: 10px;
+	margin: 2px 6px 2px 0;
+	border: 1px solid @pane-item-border-color;
+	white-space: pre-line;
+	background-color: @inset-panel-background-color;
+	max-height: 24em;
+	min-height: 5em;
+	overflow-y: scroll;
+}
+
+.hide {
+	display: none;
+}
+
+.stdout {
+	color: @text-color;
+	white-space: pre;
+}
+
+.stdout-match {
+	color: @text-color-warning;
+	white-space: pre;
+}
+
+.stdout-match:hover {
+	text-decoration: underline;
+}
+
+.stderr {
+	color: @text-color;
+	white-space: pre;
+}
+
+.stderr-match {
+	color: @text-color-warning;
+	white-space: pre;
+}
+
+.stderr-match:hover {
+	text-decoration: underline;
+}
+
+.selected {
+	background-color: @background-color-highlight;
+}
+
+.echo {
+	color: @text-color-subtle;
+	white-space: pre;
+}
+
+.error {
+	color: @text-color-error;
+	white-space: pre;
+}

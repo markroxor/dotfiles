@@ -1,0 +1,55 @@
+// The ui-variables file is provided by base themes provided by Atom.
+//
+// See https://github.com/atom/atom-dark-ui/blob/master/styles/ui-variables.less
+// for a full listing of what's available.
+@import "ui-variables";
+
+// style for console messages
+// NOTE: this is actually configured in code
+.latextools-console-message {
+}
+
+.latextools-console > .panel-resize-handle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: @component-padding;
+  cursor: row-resize;
+  z-index: 3;
+}
+
+.latextools-console > .panel-heading > .heading-title {
+  cursor: pointer;
+}
+
+.latextools-console > .panel-body {
+  display: block;
+  overflow-y: scroll;
+}
+
+.latextools-console-message > .panel-body > span {
+  display: block;
+}
+
+// style for select list
+.select-list {
+  ol.list-group {
+    position: relative;
+    overflow-y: auto;
+    max-height: 312px;
+    margin: @component-padding 0 0 0;
+    padding: 0;
+
+    li {
+      display: block;
+
+      .primary-line,
+      .secondary-line {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+    }
+  }
+}

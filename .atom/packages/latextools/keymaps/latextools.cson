@@ -1,0 +1,56 @@
+# Keybindings require three things to be fully defined: A selector that is
+# matched against the focused element, the keystroke and the command to
+# execute.
+#
+# Below is a basic keybinding which registers on all platforms by applying to
+# the root workspace element.
+
+# For more detailed documentation see
+# https://atom.io/docs/latest/behind-atom-keymaps-in-depth
+"atom-text-editor[data-grammar~='latex']":
+  '$' : 'latextools:dollar-sign'
+  '`' : 'latextools:backquote'
+  '\'': 'latextools:quote'
+  '"' : 'latextools:double-quote'
+  '{' : 'latextools:ref-cite-keypress'
+  ',' : 'latextools:ref-cite-keypress'
+
+"body:not([class~='platform-darwin']) atom-text-editor[data-grammar~='latex']":
+  'ctrl-l ctrl-l': 'editor:select-line'
+  'ctrl-l c': 'latextools:clear-log'
+  'ctrl-l escape': 'latextools:hide-ltconsole'
+  'ctrl-l shift-escape': 'latextools:show-ltconsole'
+  'ctrl-l backspace': 'latextools:delete-temp-files'
+  'ctrl-alt-b': 'latextools:build'
+  'ctrl-l j': 'latextools:jump-to-pdf'
+  'ctrl-l x': 'latextools:ref-cite-complete'
+  'ctrl-l c': 'latextools:insert-command'
+  'ctrl-l e': 'latextools:insert-environment'
+  'ctrl-l n': 'latextools:insert-environment'
+  'ctrl-l ctrl-c': 'latextools:wrap-in-command'
+  'ctrl-l ctrl-n': 'latextools:wrap-in-environment'
+  'ctrl-l ctrl-e': 'latextools:wrap-in-emph'
+  'ctrl-l ctrl-b': 'latextools:wrap-in-bold'
+  'ctrl-l ctrl-u': 'latextools:wrap-in-underline'
+  'ctrl-l ctrl-m': 'latextools:wrap-in-monospace'
+  'ctrl-l .': 'latextools:close-environment'
+
+"body.platform-darwin atom-text-editor[data-grammar~='latex']":
+  'cmd-l cmd-l': 'editor:select-line'
+  'cmd-l c': 'latextools:clear-log'
+  'cmd-l escape': 'latextools:hide-ltconsole'
+  'cmd-l shift-escape': 'latextools:show-ltconsole'
+  'cmd-l backspace': 'latextools:delete-temp-files'
+  'cmd-alt-b': 'latextools:build'
+  'cmd-l j': 'latextools:jump-to-pdf'
+  'cmd-l x': 'latextools:ref-cite-complete'
+  'cmd-l c': 'latextools:insert-command'
+  'cmd-l e': 'latextools:insert-environment'
+  'cmd-l n': 'latextools:insert-environment'
+  'cmd-l cmd-c': 'latextools:wrap-in-command'
+  'cmd-l cmd-n': 'latextools:wrap-in-environment'
+  'cmd-l cmd-e': 'latextools:wrap-in-emph'
+  'cmd-l cmd-b': 'latextools:wrap-in-bold'
+  'cmd-l cmd-u': 'latextools:wrap-in-underline'
+  'cmd-l cmd-m': 'latextools:wrap-in-monospace'
+  'cmd-l .': 'latextools:close-environment'
