@@ -1,0 +1,2 @@
+grep -rnw '/path/to/somewhere/' -e "pattern"
+ps -fA | grep python
