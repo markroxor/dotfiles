@@ -1,0 +1,17 @@
+:%s/ﬂ/fl/g
+:%s/ﬁ/fi/g
+:%s/“/``/g
+:%s/”/''/g
+:%s/\r\n/\r/g
+:%s/’/'/g
+:%s/…/.../g
+:%s/α/\\alpha/g
+:%s/β/\\beta/g
+:%s/γ/\\gamma/g
+:%s/λ/\\lambda/g
+:%s/•/\\item/g
+:%s/−/-/g
+:%s/×/\\times/g
+:%s/∞/\\infty/g
+:%s/≤/\\leq/g
+:%s/θ/\\theta/g

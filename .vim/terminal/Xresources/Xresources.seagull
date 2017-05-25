@@ -1,0 +1,39 @@
+#define S_seagrey1 #0b141a
+#define S_seagrey2 #1d252b
+#define S_seagrey3 #61707a
+#define S_seagrey4 #6d767d
+#define S_seagrey5 #787e82
+#define S_seagrey6 #808487
+#define S_seagrey7 #e6eaed
+#define S_seagrey8 #ffffff
+
+*background:  S_seagrey8
+*foreground:  S_seagrey4
+*cursorColor: S_seagrey3
+
+*color8:  S_seagrey1
+*color0:  S_seagrey2
+*color10: S_seagrey3
+*color11: S_seagrey4
+*color12: S_seagrey5
+*color14: S_seagrey6
+*color7:  S_seagrey7
+*color15: S_seagrey8
+
+#define S_red    #ff4053
+#define S_orange #ff6200
+#define S_yellow #bf8c00
+#define S_green  #11ab00
+#define S_teal   #00a5ab
+#define S_blue   #0099ff
+#define S_purple #9854ff
+#define S_pink   #ff549b
+
+*color1:  S_red
+*color9:  S_orange
+*color3:  S_yellow
+*color4:  S_blue
+*color6:  S_teal
+*color2:  S_green
+*color13: S_purple
+*color5:  S_pink
