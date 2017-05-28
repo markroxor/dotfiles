@@ -94,13 +94,27 @@ let g:NERDTreeWinPos = "right"
 " noremap s <right>
 "
 
-"source ~/.vim_runtime/vimrcs/basic.vim
-"source ~/.vim_runtime/vimrcs/filetypes.vim
-"source ~/.vim_runtime/vimrcs/extended.vim
-"Plugin 'valloric/youcompleteme'
 source ~/.vim_runtime/vimrcs/plugins_config.vim
 let g:syntastic_check_on_open=1
 let g:syntastic_enable_signs=1
 let g:ycm_show_diagnostics_ui = 1
   Plugin 'scrooloose/syntastic'
+
+set scrolloff=10
+map <C-a> <esc>ggVG<CR>
+
+" cursor for insert and normal mode
+autocmd InsertEnter,InsertLeave * set cul!
+
+" cursor shape in insert and normal modes
+if has("autocmd")
+      au VimEnter,InsertLeave * silent execute '!echo -ne "\e[1 q"' | redraw!
+        au InsertEnter,InsertChange *
+            \ if v:insertmode == 'i' | 
+            \   silent execute '!echo -ne "\e[5 q"' | redraw! |
+            \ elseif v:insertmode == 'r' |
+            \   silent execute '!echo -ne "\e[3 q"' | redraw! |
+            \ endif
+          au VimLeave * silent execute '!echo -ne "\e[ q"' | redraw!
+      endif
 

@@ -1,8 +1,0 @@
-App load time: 835ms
-(electron) app.getDataPath is deprecated. Use app.getPath instead.
-Cannot read property 'length' of undefined
-TypeError: Cannot read property 'length' of undefined
-    at AtomApplication.<anonymous> (/usr/share/atom/resources/app.asar/src/browser/atom-application.js:695:40)
-    at AtomApplication.module.exports.AtomApplication.openPaths (/usr/share/atom/resources/app.asar/src/browser/atom-application.js:700:10)
-    at /usr/share/atom/resources/app.asar/src/browser/atom-application.js:1026:24
-    at Function.wrappedCallback (/usr/share/atom/resources/atom.asar/browser/api/lib/dialog.js:78:14)
