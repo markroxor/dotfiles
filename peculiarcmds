@@ -1,6 +1,0 @@
-grep -rnw '/path/to/somewhere/' -e "pattern"
-ps -fA | grep python
-
-#diabling kworkers
-grep . -r /sys/firmware/acpi/interrupts/
-echo "disable" > /sys/firmware/acpi/interrupts/gpe17
