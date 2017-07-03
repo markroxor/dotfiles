@@ -1,7 +1,7 @@
 grep -rnw '/path/to/somewhere/' -e "pattern"
 ps -fA | grep python
 
-#diabling kworkers
+#disabling kworkers
 grep . -r /sys/firmware/acpi/interrupts/
 echo "disable" > /sys/firmware/acpi/interrupts/gpe17
 
@@ -10,3 +10,9 @@ echo "disable" > /sys/firmware/acpi/interrupts/gpe17
   egrep '^(Start-Date:|Commandline:)' |
   grep -v aptdaemon |
   egrep '^Commandline:'
+
+#sorts tracker bug
+echo -e "\nHidden=true\n" | sudo tee --append /etc/xdg/autostart/tracker-extract.desktop /etc/xdg/autostart/tracker-miner-apps.desktop /etc/xdg/autostart/tracker-miner-fs.desktop /etc/xdg/autostart/tracker-miner-user-guides.desktop /etc/xdg/autostart/tracker-store.desktop > /dev/null
+gsettings set org.freedesktop.Tracker.Miner.Files crawling-interval -2  
+gsettings set org.freedesktop.Tracker.Miner.Files enable-monitors false  
+tracker reset --hard 
