@@ -108,3 +108,8 @@ alias please=sudo
 set -o noclobber
 
 shuf -n 1 ~/gre | cowsay
+
+#autostart tmux
+if command -v tmux>/dev/null; then
+  [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux
+fi
