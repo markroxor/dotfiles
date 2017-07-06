@@ -8,10 +8,10 @@ From the settings of your favorite text editor to the way your terminal behaves,
 Clone this repository locally using the --recursive flag to download the sub-module of [oh-my-zh](https://github.com/robbyrussell/oh-my-zsh) too. Then execute install.sh as superuser.
 
 ## Insipration
-###Mainly-
+### Mainly-
 [bamos/dotfiles](https://github.com/bamos/dotfiles) 
 
-###Others-
+### Others-
 [robbyrussell/oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh) |
 [mathiasbynens/dotfiles](https://github.com/mathiasbynens/dotfiles) |
 [webpro/dotfiles](https://github.com/webpro/dotfiles) | 
