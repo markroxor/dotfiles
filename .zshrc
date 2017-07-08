@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/markroxor/.oh-my-zsh
+  export ZSH=/home/mark/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -109,7 +109,13 @@ set -o noclobber
 
 shuf -n 1 ~/gre | cowsay
 
-#autostart tmux
+
+. /home/mark/torch/install/bin/torch-activate
 if command -v tmux>/dev/null; then
-  [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux
+      [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux
 fi
+
+export PATH=/home/mark/torch/install/bin:/home/mark/torch/install/bin:/home/mark/torch/install/bin:/home/mark/bin:/home/mark/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/mark/.vimpkg/bin
+
+source /etc/zsh_command_not_found  
+
