@@ -111,6 +111,8 @@ shuf -n 1 ~/gre | cowsay
 
 
 . /home/mark/torch/install/bin/torch-activate
+
+# tmux autofire
 if command -v tmux>/dev/null; then
       [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux
 fi
@@ -119,3 +121,5 @@ export PATH=/home/mark/torch/install/bin:/home/mark/torch/install/bin:/home/mark
 
 source /etc/zsh_command_not_found  
 
+
+export PYTEST='~/.virtualenvs/alis/bin/py.test'
