@@ -1,3 +1,4 @@
+set shell=/bin/bash
 set nocompatible
 
 set shiftwidth=4 tabstop=4 expandtab
@@ -8,7 +9,7 @@ set t_Co=256
 set autochdir
 
 filetype off
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#rc()
 runtime vundle.vim
 execute pathogen#infect()
@@ -47,7 +48,8 @@ endfunction
 nmap <F4> :call ToggleSpell()<CR>
 imap <F4> <Esc>:call ToggleSpell()<CR>
 nmap <F6> :w<CR>:!make<CR>
-nmap <F7> :source ~/.vim/pdf-replace.vim<CR>
+nmap <F8> :source ~/.vim/pdf-replace.vim<CR>
+nmap <F9> <Esc>:%!fold -w 120<CR>i
 
 " Commands.
 " <leader>: \ (a backslash)
@@ -55,17 +57,14 @@ noremap <leader>W :w !sudo tee % > /dev/null<CR>
  command Rm :call delete(expand('%')) | bdelete!
 
 " Folding.
-set foldmethod=manual
-inoremap <F9> <C-O>za
-nnoremap <F9> za
-onoremap <F9> <C-C>za
-vnoremap <F9> zf
+" set foldmethod=manual
+" inoremap <F9> <C-O>za
+" nnoremap <F9> za
+" onoremap <F9> <C-C>za
+" vnoremap <F9> zf
 
 " Use LaTeX rather than plain TeX.
 let g:tex_flavor = "latex"
-
-" Copy in the OSX terminal.
-set clipboard=unnamed
 
 set guioptions-=T  "remove menu bar
 
@@ -77,9 +76,10 @@ if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
 
+
 " autofire nerdtree
-autocmd vimenter * NERDTree
-let g:NERDTreeWinPos = "right"
+ autocmd vimenter * NERDTree
+ let g:NERDTreeWinPos = "left"
 
 " Dvorak.
 " noremap <Up> <NOP>
@@ -94,7 +94,7 @@ let g:NERDTreeWinPos = "right"
 " noremap s <right>
 "
 
-source ~/.vim_runtime/vimrcs/plugins_config.vim
+" source ~/.vim_runtime/vimrcs/plugins_config.vim
 let g:syntastic_check_on_open=1
 let g:syntastic_enable_signs=1
 let g:ycm_show_diagnostics_ui = 1
@@ -118,3 +118,28 @@ if has("autocmd")
           au VimLeave * silent execute '!echo -ne "\e[ q"' | redraw!
       endif
 
+"TABS are 4 spaces long
+filetype plugin indent on
+" show existing tab with 4 spaces width
+set tabstop=4
+" " when indenting with '>', use 4 spaces width
+set shiftwidth=4
+" " On pressing tab, insert 4 spaces
+set expandtab
+
+" paste using F10
+set pastetoggle=<F10>
+
+" disabe autocomment
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
+call pathogen#helptags()
+
+imap <Tab> <C-P>
+" Plugin 'JamshedVesuna/vim-markdown-preview'
+
+" for showing line-number
+set number
+
+" left arrow key to prev line
+set whichwrap+=<,>,[,]
