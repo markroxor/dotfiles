@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Path to your oh-my-zsh installation.
-export ZSH=~/.oh-my-zsh
+  export ZSH=~/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -110,8 +110,6 @@ set -o noclobber
 shuf -n 1 ~/gre | cowsay
 
 
-. /home/mark/torch/install/bin/torch-activate
-
 # tmux autofire
 if command -v tmux>/dev/null; then
       [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux
@@ -121,5 +119,5 @@ export PATH=/home/mark/torch/install/bin:/home/mark/torch/install/bin:/home/mark
 
 source /etc/zsh_command_not_found  
 
-
+alias cat=pygmentize
 export PYTEST='~/.virtualenvs/alis/bin/py.test'
