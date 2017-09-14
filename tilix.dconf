@@ -1,0 +1,27 @@
+[profiles/2b7c4080-0ddd-46c5-8f23-563fd3ba789d]
+foreground-color='#A7A7A7'
+visible-name='Mark'
+palette=['#1E1E1E', '#CF6A4C', '#8F9D6A', '#F9EE98', '#7587A6', '#9B859D', '#AFC4DB', '#A7A7A7', '#5F5A60', '#CF6A4C', '#8F9D6A', '#F9EE98', '#7587A6', '#9B859D', '#AFC4DB', '#FFFFFF']
+badge-color-set=false
+scroll-on-output=true
+cursor-colors-set=false
+highlight-colors-set=false
+use-theme-colors=false
+bold-color-set=false
+scrollback-unlimited=true
+background-color='#1E1E1E'
+background-transparency-percent=0
+
+[/]
+middle-click-close=true
+use-overlay-scrollbar=true
+sidebar-on-right=false
+auto-hide-mouse=true
+terminal-title-style='small'
+theme-variant='dark'
+paste-advanced-default=false
+enable-wide-handle=false
+warn-vte-config-issue=false
+focus-follow-mouse=true
+terminal-title-show-when-single=true
+window-style='borderless'
