@@ -100,7 +100,7 @@ let g:syntastic_enable_signs=1
 let g:ycm_show_diagnostics_ui = 1
   Plugin 'scrooloose/syntastic'
 
-set scrolloff=10
+set scrolloff=5
 map <C-a> <esc>ggVG<CR>
 
 " cursor for insert and normal mode
