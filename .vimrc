@@ -143,3 +143,5 @@ set number
 
 " left arrow key to prev line
 set whichwrap+=<,>,[,]
+
+autocmd BufWinEnter * NERDTreeMirror

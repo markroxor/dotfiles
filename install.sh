@@ -50,3 +50,6 @@ cd .config
 for DOTFILE in $(find . -maxdepth 1 ! -path .); do
   link_file "$HOME/.config/$DOTFILE" "$PWD/$DOTFILE"
 done
+
+# googler
+sudo curl -o /usr/local/bin/googler https://raw.githubusercontent.com/jarun/googler/v3.3/googler && sudo chmod +x /usr/local/bin/googler
