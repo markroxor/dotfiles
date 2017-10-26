@@ -111,13 +111,13 @@ shuf -n 1 ~/gre | cowsay
 
 
 # tmux autofire
-if command -v tmux>/dev/null; then
-      [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux
-fi
+#if command -v tmux>/dev/null; then
+#      [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux
+#fi
 
 export PATH=/home/mark/torch/install/bin:/home/mark/torch/install/bin:/home/mark/torch/install/bin:/home/mark/bin:/home/mark/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/mark/.vimpkg/bin
 
 source /etc/zsh_command_not_found  
 
-alias cat=pygmentize
+alias cat="pygmentize -g"
 export PYTEST='~/.virtualenvs/alis/bin/py.test'
