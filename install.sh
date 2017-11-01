@@ -51,6 +51,10 @@ link_file() {
 #  link_file "$HOME/.config/$DOTFILE" "$PWD/$DOTFILE"
 #done
 
+# gre
+sudo apt-get install cowsay
+cp gre ~/
+
 # git
 sudo apt-get install git
 
@@ -84,3 +88,7 @@ cp mark.zsh-theme ~/.oh-my-zsh/themes/
 
 # windows theme
 ./layoutmanager.sh --windows
+
+# some keyboard shortcuts
+python3 keycomb.py 'Explorer' 'nautilus' '<Super>E'
+python3 keycomb.py 'tilix' 'tilix --quake' 'F3'
