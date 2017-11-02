@@ -52,16 +52,17 @@ link_file() {
 #done
 
 # gre
-sudo apt-get install cowsay
+sudo apt-get -y install cowsay
 cp gre ~/
 
-# git
-sudo apt-get install git
+# git and curl
+sudo apt-get -y install git curl vim python-pygments
+
 
 # tilix
-sudo add-apt-repository ppa:webupd8team/terminix
+sudo add-apt-repository -y ppa:webupd8team/terminix
 sudo apt-get update
-sudo apt-get install tilix
+sudo apt-get install -y tilix
 
 # tilix conf
 dconf load /com/gexperts/Tilix/ < tilix.dconf
@@ -70,20 +71,20 @@ dconf load /com/gexperts/Tilix/ < tilix.dconf
 sudo curl -o /usr/local/bin/googler https://raw.githubusercontent.com/jarun/googler/v3.3/googler && sudo chmod +x /usr/local/bin/googler
 
 # vim
-cp .vim* ~/
+cp -r ./config/.vim* ~/
 
 # zshrc
-sudo apt-get install zsh
+sudo apt-get install -y zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-# vundle
+# vundle backup
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 # nerdTree
 git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
 
 # zshrc config
-cp .zshrc ~/
+cp ./config/.zshrc ~/
 cp mark.zsh-theme ~/.oh-my-zsh/themes/
 
 # windows theme
