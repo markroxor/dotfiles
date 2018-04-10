@@ -1,7 +1,8 @@
 #!/bin/sh
 case "$1" in
   start)
-    $0 stop 
+    $0 stop
+    # replace source=xxx by your source
     pactl load-module module-simple-protocol-tcp rate=48000 format=s16le channels=2 source=alsa_output.pci-0000_26_00.3.analog-stereo.monitor record=true port=8000
     ;;
   stop)
