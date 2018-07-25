@@ -20,3 +20,6 @@ ssh -nNT -L 9999:localhost:8888 markroxor@192.168.1.163
 
 ### create jupyter kernel
 python -m ipykernel install --user --name venv_fs2ml --display-name "fs2ml2"
+
+## Remove dangling images
+docker rmi $(sudo docker images --filter "dangling=true" -q --no-trunc)
