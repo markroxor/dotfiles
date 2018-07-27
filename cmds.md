@@ -24,3 +24,4 @@ vim ~/.local/share/jupyter/kernels/env/kernel.json
 
 ## Remove dangling images
 docker rmi $(sudo docker images --filter "dangling=true" -q --no-trunc)
+docker system prune
