@@ -78,8 +78,8 @@ endif
 
 
 " autofire nerdtree
- autocmd vimenter * NERDTree
- let g:NERDTreeWinPos = "left"
+" autocmd vimenter * NERDTree
+" let g:NERDTreeWinPos = "left"
 
 " Dvorak.
 " noremap <Up> <NOP>
@@ -144,4 +144,4 @@ set number
 " left arrow key to prev line
 set whichwrap+=<,>,[,]
 
-autocmd BufWinEnter * NERDTreeMirror
+" autocmd BufWinEnter * NERDTreeMirror
