@@ -116,8 +116,8 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 chsh -s /bin/zsh
 
 # zshrc config
-cp ./config/.zshrc ~/
-cp mark.zsh-theme ~/.oh-my-zsh/themes/
+sudo cp ./config/.zshrc ~/
+sudo cp mark.zsh-theme ~/.oh-my-zsh/themes/
 
 
 # Stacer
@@ -140,3 +140,6 @@ sudo ~/Downloads/install.sh
 
 # ncdu
 sudo apt-get install ncdu -y
+
+# python pygments
+sudo apt install python-pygments
