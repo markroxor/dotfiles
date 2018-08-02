@@ -87,16 +87,22 @@ cp ./config/.tmux.conf ~/
 python3 keycomb.py 'Explorer' 'nautilus' '<Super>E'
 python3 keycomb.py 'tilix' 'tilix --quake' 'F3'
 
-
-#gnome extensions
 #system monitor
 sudo apt-get -y install gir1.2-gtop-2.0 gir1.2-networkmanager-1.0  gir1.2-clutter-1.0
+
+#gnome extensions
 mkdir ~/git_projects
-cd ~/git_projects
-git clone git://github.com/paradoxxxzero/gnome-shell-system-monitor-applet.git
 mkdir -p ~/.local/share/gnome-shell/extensions
 cd ~/.local/share/gnome-shell/extensions
+
+# alt-tab
+git clone https://github.com/kwalo/gnome-shell-alt-tab-workspace.git ~/git_projects
 ln -s ~/git_projects/gnome-shell-system-monitor-applet/system-monitor@paradoxxx.zero.gmail.com
+gnome-shell-extension-tool --enable-extension=alt-tab-workspace@kwalo.net
+
+# sys-mon
+git clone git://github.com/paradoxxxzero/gnome-shell-system-monitor-applet.git ~/git_projects
+ln -s ~/git_projects/gnome-shell-alt-tab-workspace/alt-tab-workspace@kwalo.net
 gnome-shell-extension-tool --enable-extension=system-monitor@paradoxxx.zero.gmail.com
 
 #sound indicator
