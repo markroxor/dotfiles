@@ -122,9 +122,16 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 chsh -s /bin/zsh
 
 # zshrc config
-sudo cp ./config/.zshrc ~/
-sudo cp mark.zsh-theme ~/.oh-my-zsh/themes/
+cp ./config/.zshrc ~/
+cp mark.zsh-theme ~/.oh-my-zsh/themes/
 
+# sshrc
+wget https://raw.githubusercontent.com/Russell91/sshrc/master/sshrc 
+chmod +x sshrc
+sudo mv sshrc /usr/local/bin #or anywhere else on your PATH
+
+# sshrc config
+cp ./config/.sshrc ~/
 
 # Stacer
 sudo add-apt-repository -y ppa:oguzhaninan/stacer
