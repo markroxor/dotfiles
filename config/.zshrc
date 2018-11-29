@@ -103,7 +103,6 @@ setopt HIST_IGNORE_DUPS
 setopt EXTENDED_HISTORY
 ##########################!/usr/bin/env bash
 alias please=sudo
-eval "$(hub alias -s)"
 
 #disables "somethin" > impFile to "somethin" >| impFile
 set -o noclobber

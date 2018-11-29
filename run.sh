@@ -40,10 +40,10 @@ set -e
 
 
 # tilix
-add-apt-repository -y ppa:oguzhaninan/stacer
-add-apt-repository -y ppa:webupd8team/terminix
-add-apt-repository -y ppa:yktooo/ppa
-add-apt-repository -y ppa:bablu-boy/nutty.0.1
+# add-apt-repository ppa:oguzhaninan/stacer
+# add-apt-repository ppa:webupd8team/terminix
+# add-apt-repository ppa:yktooo/ppa
+# add-apt-repository ppa:bablu-boy/nutty.0.1
 apt-get update
 
 
@@ -69,7 +69,7 @@ apt-get install -y tilix
 apt-get -y install gir1.2-gtop-2.0 gir1.2-nm-1.0  gir1.2-clutter-1.0
 
 #sound indicator
-apt-get -y install indicator-sound-switcher
+# apt-get -y install indicator-sound-switcher
 
 # zshrc
 apt-get install -y zsh
@@ -80,15 +80,15 @@ chmod +x sshrc
 mv sshrc /usr/local/bin #or anywhere else on your PATH
 
 # Stacer
-apt-get -y install stacer
+# apt-get -y install stacer
 
 # nutty
-apt-get -y install nutty
+# apt-get -y install nutty
 
 # xdm
-wget https://excellmedia.dl.sourceforge.net/project/xdman/xdm-2018-x64.tar.xz -P ~/Downloads
-tar -xvf ~/Downloads/xdm-2018-x64.tar.xz
-~/Downloads/xdm.sh
+# wget https://excellmedia.dl.sourceforge.net/project/xdman/xdm-2018-x64.tar.xz -P ~/Downloads
+# tar -xvf ~/Downloads/xdm-2018-x64.tar.xz
+# ~/Downloads/xdm/install.sh
 
 # ncdu
 apt-get install ncdu -y
