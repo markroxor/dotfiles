@@ -35,14 +35,14 @@ rm -rf ~/.local/share/gnome-shell/extensions/temp
 gnome-shell-extension-tool --enable-extension=alt-tab-workspace@kwalo.net
 
 # sys-mon
-git clone git://github.com/paradoxxxzero/gnome-shell-system-monitor-applet.git ~/.local/share/gnome-shell/extensions/temp #~/git_projects
+git clone https://github.com/paradoxxxzero/gnome-shell-system-monitor-applet.git ~/.local/share/gnome-shell/extensions/temp #~/git_projects
 mv ~/.local/share/gnome-shell/extensions/temp/* ~/.local/share/gnome-shell/extensions/
 rm -rf ~/.local/share/gnome-shell/extensions/temp
 gnome-shell-extension-tool --enable-extension=system-monitor@paradoxxx.zero.gmail.com
 
-#workspace switcher disable
+# workspace switcher disable
 rm -rf ~/.local/share/gnome-shell/extensions/disable-workspace-switcher-popup@github.com
-git clone git://github.com/windsorschmidt/disable-workspace-switcher-popup \
+git clone https://github.com/windsorschmidt/disable-workspace-switcher-popup.git \
 ~/.local/share/gnome-shell/extensions/disable-workspace-switcher-popup@github.com
 
 # zshrc config

@@ -104,11 +104,13 @@ setopt EXTENDED_HISTORY
 ##########################!/usr/bin/env bash
 alias please=sudo
 
-#disables "somethin" > impFile to "somethin" >| impFile
+# disables "somethin" > impFile to "somethin" >| impFile
 set -o noclobber
 
 shuf -n 1 ~/gre | cowsay
 
+# suggest command when wrong
+setopt correct 
 
 # tmux autofire
 #if command -v tmux>/dev/null; then
