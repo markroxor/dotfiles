@@ -52,5 +52,11 @@ cp mark.zsh-theme ~/.oh-my-zsh/themes/
 # sshrc config
 cp ./config/.sshrc ~/
 
+# vim plugins
+vim +PluginInstall +qall
+
+
+
+# zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 chsh -s /bin/zsh
