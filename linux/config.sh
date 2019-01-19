@@ -7,16 +7,16 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
 
 #configs
-cp -r config/.vim* ~/
-cp -r config/.git* ~/
-cp gre ~/
+cp -r ../config/.vim* ~/
+cp -r ../config/.git* ~/
+cp ../config/gre ~/
 
 
 # tilix conf
 dconf load /com/gexperts/Tilix/ < tilix.dconf
 
 #tmux conf
-cp ./config/.tmux.conf ~/
+cp ../config/.tmux.conf ~/
 
 
 # some keyboard shortcuts
@@ -46,16 +46,14 @@ git clone https://github.com/windsorschmidt/disable-workspace-switcher-popup.git
 ~/.local/share/gnome-shell/extensions/disable-workspace-switcher-popup@github.com
 
 # zshrc config
-cp ./config/.zshrc ~/
-cp mark.zsh-theme ~/.oh-my-zsh/themes/
+cp ../config/.zshrc ~/
+cp ../config/mark.zsh-theme ~/.oh-my-zsh/themes/
 
 # sshrc config
-cp ./config/.sshrc ~/
+cp ../config/.sshrc ~/
 
 # vim plugins
 vim +PluginInstall +qall
-
-
 
 # zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
