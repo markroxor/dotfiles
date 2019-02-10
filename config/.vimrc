@@ -1,55 +1,78 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-"""""""""""""""""""VUNDLE""""""""""""""""""""""""""""""""""""""""
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-" plugin on GitHub repo
 Plugin 'tpope/vim-fugitive'
 Plugin 'christoomey/vim-conflicted'
-Plugin 'git://git.wincent.com/command-t.git'
+
+" Side bar file explorer
 Plugin 'scrooloose/nerdtree'
+
+" flake8 checks
 Plugin 'nvie/vim-flake8'
-Plugin 'Nequo/vim-allomancer'
+
+" tab names with numbers
 Plugin 'mkitt/tabline.vim'
-" Plugin 'JamshedVesuna/vim-markdown-preview'
+
+" bulk comment code with gc
+Plugin 'tomtom/tcomment_vim'
+
+" awesome statusbar
+Plugin 'itchyny/lightline.vim'
+
+" atom like theme
+colo mysticaltutor
 
 " The sparkup vim script is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-
-" source ~/.vim_runtime/vimrcs/plugins_config.vim
-Plugin 'scrooloose/syntastic'
-let g:syntastic_check_on_open=1
-let g:syntastic_enable_signs=1
-let g:ycm_show_diagnostics_ui = 1
-
-" VIM coding scheme
-colo mysticaltutor
+" Install L9 and avoid a Naming conflict if you've already installed a
+" different version somewhere else.
+" Plugin 'ascenator/L9', {'name': 'newL9'}
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
 
 set shell=/bin/bash
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set nocompatible
 
 set directory=~/.vim/tmp
 
+set mouse=v
 set wrap mouse=a
+
 set dir=~/.vim/tmp backupdir=~/.vim/tmp
 set ignorecase smartcase shiftround smartindent
 set t_Co=256
 set autochdir
 
+
+" set background=dark
+try
+	colorscheme mark
+catch /^Vim\%((\a\+)\)\=:E185/
+  " Don't load a color scheme.
+endtry
 filetype plugin indent on
 
 runtime macros.vim
@@ -89,7 +112,7 @@ noremap <leader>W :w !sudo tee % > /dev/null<CR>
 " Use LaTeX rather than plain TeX.
 let g:tex_flavor = "latex"
 
-set guioptions-=T  "remove menu bar
+" set guioptions-=T  "remove menu bar
 
 autocmd User GoyoEnter Limelight
 autocmd User GoyoLeave Limelight!
@@ -105,6 +128,11 @@ autocmd vimenter * NERDTree
 let g:NERDTreeWinPos = "left"
 
 
+" source ~/.vim_runtime/vimrcs/plugins_config.vim
+let g:syntastic_check_on_open=1
+let g:syntastic_enable_signs=1
+let g:ycm_show_diagnostics_ui = 1
+Plugin 'scrooloose/syntastic'
 
 set scrolloff=5
 map <C-a> <esc>ggVG<CR>
@@ -148,9 +176,13 @@ set pastetoggle=<F10>
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 imap <Tab> <C-P>
+" Plugin 'JamshedVesuna/vim-markdown-preview
 
 " for showing line-number
 set number
+
+" show cursor's line
+" set cursorline
 
 " left arrow key to prev line
 set whichwrap+=<,>,[,]
@@ -158,3 +190,7 @@ set whichwrap+=<,>,[,]
 " open NERDTree in all the tabs
 autocmd BufWinEnter * NERDTreeMirror
 syntax on
+
+let g:NERDTreeNodeDelimiter = "\u00a0"
+set clipboard=unnamed
+

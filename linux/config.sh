@@ -53,8 +53,8 @@ cp ../config/mark.zsh-theme ~/.oh-my-zsh/themes/
 cp ../config/.sshrc ~/
 
 # vim plugins
+wget -O ~/.vim/colors/ https://raw.githubusercontent.com/caksoylar/vim-mysticaltutor/master/colors/mysticaltutor.vim
 vim +PluginInstall +qall
-
 # zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 chsh -s /bin/zsh
