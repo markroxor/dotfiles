@@ -46,9 +46,6 @@ rm -rf ~/.local/share/gnome-shell/extensions/disable-workspace-switcher-popup@gi
 git clone https://github.com/windsorschmidt/disable-workspace-switcher-popup.git \
 ~/.local/share/gnome-shell/extensions/disable-workspace-switcher-popup@github.com
 
-# zshrc config
-cp ../config/.zshrc ~/
-cp ../config/mark.zsh-theme ~/.oh-my-zsh/themes/
 
 # sshrc config
 cp ../config/.sshrc ~/
@@ -58,4 +55,9 @@ wget -O ~/.vim/colors/ https://raw.githubusercontent.com/caksoylar/vim-mysticalt
 vim +PluginInstall +qall
 # zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-chsh -s /bin/zsh
+
+# zshrc config
+cp ../config/.zshrc ~/
+cp ../config/mark.zsh-theme ~/.oh-my-zsh/themes/
+
+sudo chsh -s /bin/zsh $(whoami)
