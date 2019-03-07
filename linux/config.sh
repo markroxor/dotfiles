@@ -8,6 +8,7 @@ git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
 
 #configs
 cp -r ../config/.vim* ~/
+wget -P ~/.vim/colors https://raw.githubusercontent.com/caksoylar/vim-mysticaltutor/master/colors/mysticaltutor.vim
 cp -r ../config/.git* ~/
 cp ../config/gre ~/
 
