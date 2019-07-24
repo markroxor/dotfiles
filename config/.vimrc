@@ -193,4 +193,5 @@ syntax on
 
 let g:NERDTreeNodeDelimiter = "\u00a0"
 set clipboard=unnamed
-
+" tabs and spaces differently
+set listchars=tab:>-,trail:-,eol:$ list
