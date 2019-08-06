@@ -28,3 +28,4 @@ docker system prune
 
 ## fixing resolution scaling in linux
 xrandr --output 'eDP-1' --scale 0.7x0.7
+xrandr --output HDMI-0 --brightness 0.5
