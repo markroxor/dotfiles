@@ -35,6 +35,7 @@ mv sshrc /usr/local/bin #or anywhere else on your PATH
 
 apt-get install htop -y
 apt-get install nethogs -y
+apt-get install tkdiff
 
 # ncdu finds exact folder size with --h
 apt-get install ncdu -y
