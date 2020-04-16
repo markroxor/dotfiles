@@ -125,6 +125,7 @@ endif
 
 " autofire nerdtree
 autocmd vimenter * NERDTree
+autocmd VimEnter * wincmd p
 let g:NERDTreeWinPos = "left"
 
 
@@ -195,3 +196,4 @@ let g:NERDTreeNodeDelimiter = "\u00a0"
 set clipboard=unnamed
 " tabs and spaces differently
 set listchars=tab:>-,trail:-,eol:$ list
+set mouse=i
