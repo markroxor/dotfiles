@@ -31,6 +31,12 @@ Plugin 'itchyny/lightline.vim'
 " atom like theme
 colo mysticaltutor
 
+" git additions deletion
+Plugin 'https://github.com/airblade/vim-gitgutter.git'
+
+" Brackets colorised
+Plugin 'frazrepo/vim-rainbow'
+
 " The sparkup vim script is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
