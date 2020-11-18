@@ -1,3 +1,8 @@
+if empty(glob('~/.vim/tmp'))
+    silent !mkdir -p ~/.vim/tmp
+endif
+set directory=$HOME/.vim/tmp
+
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
