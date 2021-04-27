@@ -15,10 +15,6 @@ else
 fi
 
 # bluetooth
-# identifier="PXC"
-# index=$(pacmd list-cards |awk '/index:/ {print $0} /name:/ {print $0};' | grep -B1 $identifier | head -n1 | cut -d ":" -f 2)
-# echo $index
-
 exit
 if [[ $1 = 'r' ]]
     then
