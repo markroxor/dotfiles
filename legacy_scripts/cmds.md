@@ -30,3 +30,8 @@ docker system prune
 xrandr --output 'eDP-1' --scale 0.7x0.7      
 xrandr --output HDMI-0 --brightness 0.5
 xrandr --output HDMI-0 --brightness $(bc <<< "`xrandr --verbose | grep -i brightness | cut -f2 -d ' ' | head -n1`-0.2")
+
+## adding new resolution
+cvt 2000 1342 60
+»xrandr --newmode  "2000x1342_60.00"  225.50  2000 2144 2352 2704  1342 1345 1355 1391 -hsync +vsync
+xrandr --addmode Virtual1 2000x1342_60.00
