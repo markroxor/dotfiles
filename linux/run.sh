@@ -1,10 +1,11 @@
 #!/bin/bash
 set -e
 
+apt-get update
+apt-get install software-properties-common
+
 # add-apt-repository ppa:bablu-boy/nutty.0.1
 add-apt-repository ppa:yktooo/ppa
-
-apt-get update
 
 #sound indicator
 apt-get -y install indicator-sound-switcher
