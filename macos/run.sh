@@ -8,7 +8,7 @@ set -e
 sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 
 # iterm2
-brew cask install iterm2
+brew install --cask iterm2
 cp ../config/com.googlecode.iterm2.plist .
 
 brew install htop
