@@ -18,6 +18,7 @@ brew install nethogs
 brew install ncdu
 brew install cowsay
 brew install coreutils
+brew install --cask alt-tab	
 
 #vundle
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
