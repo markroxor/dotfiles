@@ -40,15 +40,15 @@ setopt EXTENDED_HISTORY
 # disables "somethin" > impFile to "somethin" >| impFile
 set -o noclobber
 
-if [[ $(uname)='Darwin' ]]
-then
-    alias shuf=gshuf
-fi
+#if [[ $(uname)='Darwin' ]]
+#then
+#    alias shuf=gshuf
+#fi
 
-shuf -n 1 ~/gre | cowsay
+#shuf -n 1 ~/gre | cowsay
 
-alias please=sudo
-alias l=ls
-alias cat="pygmentize -g"
+#alias please=sudo
+#alias l=ls
+#alias cat="pygmentize -g"
 
 export HOMEBREW_NO_AUTO_UPDATE=1
